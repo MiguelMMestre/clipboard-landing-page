@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --strong-cyan: hsl(171, 66%, 44%);
+    --light-blue: hsl(233, 100%, 69%);
+    --dark-grayish-blue: hsl(210, 10%, 33%);
+    --grayish-blue: hsl(201, 11%, 66%);
+}
+img{
+    max-width: 100%;
+}
+body{
+    background: url(images/bg-header-mobile.png) no-repeat top;
+    background-size: contain;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 18px;
+}
+.container{
+    width: 90%;
+    max-width: 400px;
+    padding: 4rem 0;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+.image{
+    padding: 0 0 2rem 0;
+}
+.title{
+    padding: 0.5em 0;
+    font-size: xx-large;
+    color: var(--dark-grayish-blue);
+}
+.text{
+    font-size: 1.1rem;
+    color: var(--grayish-blue);
+    margin-bottom: 3rem;
+}
+.subtitle{
+    padding: 0.5em 0;
+    color: var(--dark-grayish-blue);   
+}
+button{
+    border: none;
+    outline: none;
+    margin: 1rem auto;
+    width: 95%;
+    max-width: 320px;
+    border-radius: 100px;
+    display: block;
+    padding: 1rem 0;
+    color: white;
+}
+button:hover{
+    cursor: pointer;
+}
+.btn-green{
+    background-color: var(--strong-cyan);
+    box-shadow: 0 0 10px 3px var(--strong-cyan);
+}
+.btn-blue{
+    background-color: var(--light-blue);
+}
+aside{
+    margin: 0 0 7rem 0;
+}
+.last{
+    background-color: hsla(201, 11%, 66%, 0.2);
+}
+.image-small{
+    width: 3em;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 2em 0;
+}
+li{
+    padding: 0.5em 0;
+}
+a{
+    text-decoration: none;
+    color: var(--dark-grayish-blue)
+}
+a:hover{
+    color: var(--strong-cyan);
+}
+.social-box{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0 auto;
+}
+/*Media for +375px*/ /*675*/
+@media (min-width: 850px) {
+    body{
+        background: url(images/bg-header-desktop.png) no-repeat top;
+        background-size: contain;
+    }
+    .container{
+        max-width: 1200px;
+    }
+    button{
+        display: inline;
+        margin: 1rem;
+        max-width: 250px;
+    }
+    .full{
+        width: 100%;
+    }
+    .flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .left{
+        flex-basis: 65%;
+        transform: translate(-17%, 0);
+    }
+    .right{
+        flex-basis: 35%;
+        text-align: start;
+        align-self: baseline;
+        font-size: x-large;
+    }
+    .row{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: baseline;
+        padding: 1.5rem 0;
+    }
+    .row aside{
+        width: 100%;
+        margin: 0 0 3rem 0;
+    }
+    .column{
+        width: calc(100% / 3);
+        padding: 0 10px;
+    }
+    .nowrap{
+        width: calc(100% / 5);
+    }
+    .last .container{
+        display: flex;
+        padding: 0;
+    }
+    .last .container figure{
+        flex-basis: 10%;
+        align-self: center;
+    }
+    .list{
+        display: flex;
+        flex-basis: 50%;
+        flex-flow: row wrap;
+    }
+    .list li{
+        padding: 0.5rem;
+    }
+    .last .container .social-box{
+        align-self: center;
+        flex-basis: 25%;
+    }
+    .contact-us{
+        order: 4;
+    }
+    .privacy-policy{
+        order: 2;
+    }
+    .press-kit{
+        order: 5;
+    }
+    .install-guide{
+        order: 3;
+    }
+}
